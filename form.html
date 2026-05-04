@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="Order African Violet starter plants. Choose varieties and quantities, then submit your order by email.">
+  <meta name="keywords" content="African Violet, Saintpaulia, Gesneriaceae, Gesneriad">
+  <meta name="author" content="Lauren Green">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  
+  <title>Personal Homepage: Store</title>
+
+<style>
+	
+	h2	
+		{
+		font-size: 36px;
+		text-decoration: none;
+		color: darkgreen;
+		font-weight: bold;
+		text-shadow: 2px 2px 2px #80008080;
+		text-align: center;
+		font-family: papyrus, garamond, serif;
+		}
+	h3
+		{
+		font-family: Arial, sans-serif;
+		font-size: 16px;
+		text-decoration: underline;
+		}
+	#plantorderform
+		{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+		}
+	#reset
+		{
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+		float: right;
+		}
+	section#chooseplant
+		{
+		grid-column: 1 / 3;
+		float: clear;
+		}
+	fieldset.plants
+		{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+		}
+	#pickupinfo
+		{
+		grid-column: 1 / 2;
+		grid-row: 3 / 5;
+		}
+	#enterinfo
+		{
+		grid-column: 2 / 3;
+		grid-row: 3 / 4;
+		}
+	#ordersummary
+		{
+		grid-column: 2 / 3;
+		grid-row: 4 / 5;
+		}
+		
+	fieldset,
+	section#pickupinfo,
+	#ordersummary
+		{
+		padding: 20px;
+		border-radius: 20px;
+		border: 5px solid #a3d9a5; /* Soft Green */
+		background-color: #FFFFFF90;
+		}
+
+/*Flex Display for items inside each plant entry: image, checkbox, text, qty*/
+	.plant-entry
+		{
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-bottom: 15px;
+		}
+	.plant-entry img
+		{
+		max-width: 100px;
+		}
+	#address
+		{
+		text-decoration: underline;
+		}
+
+	.plant-entry img:hover
+		{
+		transform: scale(1.05);
+		}
+
+	.hidden-field 
+		{
+		display: none;
+		}
+
+
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1174px)
+	{
+	#plantorderform,
+	fieldset.plants
+		{
+		grid-template-columns: 1fr;
+		}
+	#reset
+		{
+		grid-column: 1;
+		grid-row: 1 / 2;
+		}
+	section#chooseplant
+		{
+		grid-column: 1;
+		grid-row: 2 / 3;
+		}
+	#pickupinfo
+		{
+		grid-column: 1;
+		grid-row: 3 / 4;
+		}
+	#enterinfo
+		{
+		grid-column: 1;
+		grid-row: 4 / 5;
+		}
+	#ordersummary
+		{
+		grid-column: 1;
+		grid-row: 5 / 6;
+		}
+	#ordersummary button
+		{
+		display: block;
+		margin: 20px auto 0 auto;
+		}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+  <nav>
+	<h4><a href="index.html">Lauren's<br>
+		African Violets</a></h4>
+	
+	<ul>		
+		<li><a href="index.html">About me</a></li>
+		<li><a href="africanviolets.html">African Violet Care</a></li>      
+
+    </ul>
+
+	<ul>
+		<li class="active" id="buyplants">Buy<br>African Violet<br>Starter Plants!</li>
+	</ul>
+  </nav>
+
+  <header>
+    <h1>Lauren's African Violets</h1>
+  </header>
+  
+<hr class="rule" id="top">
+
+<main>
+
+<h2>African Violet Order Form</h2>
+<br>
+<form name="plant-order" method="POST" data-netlify="true" id="plantorderform">
+
+<section id="chooseplant">
+
+<input type="hidden" name="form-name" value="plant-order">
+
+<button id="reset" type="reset">Reset</button>
+
+<br><br>
+
+<fieldset class="plants">
+
+<!--1. Optimara Michele-->
+    <div class="plant-entry" data-name="Optimara Michele">
+		<a href="#avmichele1026">
+		<img src="assets/avmichele1026.jpg" alt="Optimara Rhapsodie Michele">
+		</a>
+		<label for="cb1"></label>
+        <input type="checkbox" id="cb1" name="Michele_Selected" value="Michele_Selected">
+        Optimara 'Rhapsodie Michele'
+		<label for="qty1"></label>
+		<input type="number" id="qty1" name="Michele_Quantity" min="1" max="9" placeholder="Qty">
+    </div>
+	<div class="lightbox" id="avmichele1026">
+		<a href="#" class="close">&times;</a>
+		<img src="assets/avmichele1026.jpg" alt="Optimara Rhapsodie Michele - Large View">
+	</div>
+
+<!--2. Optimara Michele WHITE-->
+    <div class="plant-entry" data-name="Optimara Michele Sport (White)">
+		<a href="#MicheleSportedWhite1026">
+		<img src="assets/MicheleSportedWhite1026.jpg" alt="Rhapsodie Michele Sport White">
+		</a>
+		<label for="cb2"></label>
+        <input type="checkbox" id="cb2" name="Michele_Sport_White_Selected" value="Michele_Sport_White_Selected">
+        Optimara 'Rhapsodie Michele' Sport (White)
+		<label for="qty2"></label>
+		<input type="number" id="qty2" name="Michele_Sport_Quantity" min="1" max="5" placeholder="Qty">
+    </div>
+	<div class="lightbox" id="MicheleSportedWhite1026">
+		<a href="#" class="close">&times;</a>
+		<img src="assets/MicheleSportedWhite1026.jpg" alt="Rhapsodie Michele Sport - Large View">
+	</div>
+
+<!--3. Optimara Michele PINK
+    <div class="plant-entry" data-name="Optimara Michele Sport (White)">
+		<a href="#MicheleSportedWhite1026">
+		<img src="assets/MicheleSportedWhite1026.jpg" alt="Rhapsodie Michele Sport White">
+		</a>
+		<label for="cb3"></label>
+        <input type="checkbox" id="cb3" name="Michele_Sport_White_Selected" value="Michele_Sport_White_Selected">
+        Optimara 'Rhapsodie Michele' Sport (White)
+		<label for="qty3"></label>
+		<input type="number" id="qty3" name="Michele_Sport_Quantity" min="1" max="5" placeholder="Qty">
+    </div>
+	<div class="lightbox" id="MicheleSportedWhite1026">
+		<a href="#" class="close">&times;</a>
+		<img src="assets/MicheleSportedWhite1026.jpg" alt="Rhapsodie Michele Sport - Large View">
+	</div>-->
+	
+<!--4. Neverland Dreams
+    <div class="plant-entry" data-name="Neverland Dreams">
+		<a href="#avnldreams1026">
+		<img src="assets/avnldreams1026.jpg" alt="Neverland Dreams">
+		</a>
+		<label for="cb4"></label>
+        <input type="checkbox" id="cb4" name="Neverland_Dreams_Selected" value="Neverland_Dreams_Selected">
+        Senk's 'Neverland Dreams'
+		<label for="qty4"></label>
+		<input type="number" id="qty4" name="Neverland_Dreams_Quantity" min="1" max="3" placeholder="Qty">
+    </div>
+	<div class="lightbox" id="avnldreams1026">
+		<a href="#" class="close">&times;</a>
+		<img src="assets/avnldreams1026.jpg" alt="Neverland Dreams - Large View">
+	</div>-->
+
+<!--5. Bob's Omega-->
+    <div class="plant-entry" data-name="Bob's Omega">
+		<a href="#avomega1026">
+		<img src="assets/avomega1026.jpg" alt="Bob's Omega">
+		</a>
+		<label for="cb5"></label>
+        <input type="checkbox" id="cb5" name="Bob_Omega_Selected" value="Bob_Omega_Selected">
+        Bob's 'Omega'
+		<label for="qty5"></label>
+		<input type="number" id="qty5" name="Bob_Omega_Quantity" min="1" max="5" placeholder="Qty">
+    </div>
+	<div class="lightbox" id="avomega1026">
+		<a href="#" class="close">&times;</a>
+		<img src="assets/avomega1026.jpg" alt="Bob's Omega - Large View">
+	</div>
+
+<!--6. Rivermist Sizzle-->
+    <div class="plant-entry" data-name="Rivermist Sizzle">
+		<a href="#avrmsizzle1026">
+		<img src="assets/avrmsizzle1026.jpg" alt="Rivermist Sizzle">
+		</a>
+		<label for="cb6"></label>
+        <input type="checkbox" id="cb6" name="Rivermist_Sizzle_Selected" value="Rivermist_Sizzle_Selected">
+        'Rivermist Sizzle'
+		<label for="qty6"></label>
+		<input type="number" id="qty6" name="Rivermist_Sizzle_Quantity" min="1" max="6" placeholder="Qty">
+    </div>
+	<div class="lightbox" id="avrmsizzle1026">
+		<a href="#" class="close">&times;</a>
+		<img src="assets/avrmsizzle1026.jpg" alt="Rivermist Sizzle - Large View">
+	</div>
+
+<!--7. Optimara Romance-->
+    <div class="plant-entry" data-name="Optimara Romance">
+		<a href="#avromance1026">
+		<img src="assets/avromance1026.jpg" alt="Optimara Romance">
+		</a>
+		<label for="cb7"></label>
+        <input type="checkbox" id="cb7" name="Optimara_Romance_Selected" value="Optimara_Romance_Selected">
+        Optimara 'Romance'
+		<label for="qty7"></label>
+		<input type="number" id="qty7" name="Optimara_Romance_Quantity" min="1" max="3" placeholder="Qty">
+    </div>
+	<div class="lightbox" id="avromance1026">
+		<a href="#" class="close">&times;</a>
+		<img src="assets/avromance1026.jpg" alt="Optimara Romance - Large View">
+	</div>
+
+<!--8. Hunter's Tranquility-->
+    <div class="plant-entry" data-name="Hunter's Tranquility">
+		<a href="#avhunterstranquility">
+		<img src="assets/avhunterstranquility.png" alt="Hunter's Tranquility">
+		</a>
+		<label for="cb8"></label>
+        <input type="checkbox" id="cb8" name="Hunter_Tranquility_Selected" value="Hunter_Tranquility_Selected">
+        Hunter's 'Tranquility'
+		<label for="qty8"></label>
+		<input type="number" id="qty8" name="Hunter_Tranquility_Quantity" min="1" max="4" placeholder="Qty">
+    </div>
+	<div class="lightbox" id="avhunterstranquility">
+		<a href="#" class="close">&times;</a>
+		<img src="assets/avhunterstranquility.png" alt="Hunter's Tranquility - Large View">
+	</div>
+
+<!--9. Ian Sahara-->
+    <div class="plant-entry" data-name="Ian Sahara">
+		<a href="#aviansahara1026">
+		<img src="assets/aviansahara1026.jpg" alt="Ian Sahara">
+		</a>
+		<label for="cb9"></label>
+        <input type="checkbox" id="cb9" name="Ian_Sahara_Selected" value="Ian_Sahara_Selected">
+        Ian Sahara
+		<label for="qty9"></label>
+		<input type="number" id="qty9" name="Ian_Sahara_Quantity" min="1" max="1" placeholder="Qty">
+    </div>
+	<div class="lightbox" id="aviansahara1026">
+		<a href="#" class="close">&times;</a>
+		<img src="assets/aviansahara1026.jpg" alt="Ian Sahara - Large View">
+	</div>
+
+<!--10. Edge of Darkness-->
+    <div class="plant-entry" data-name="Edge of Darkness">
+		<a href="#avedgedarkness1026">
+		<img src="assets/avedgedarkness1026.jpg" alt="Edge of Darkness">
+		</a>
+		<label for="cb10"></label>
+        <input type="checkbox" id="cb10" name="Edge_Darkness_Selected" value="Edge_Darkness_Selected">
+        Edge of Darkness
+		<label for="qty10"></label>
+		<input type="number" id="qty10" name="Edge_Darkness_Quantity" min="1" max="4" placeholder="Qty">
+    </div>
+	<div class="lightbox" id="avedgedarkness1026">
+		<a href="#" class="close">&times;</a>
+		<img src="assets/avedgedarkness1026.jpg" alt="Edge of Darkness - Large View">
+	</div>
+
+<!--11. LE Isadora-->
+    <div class="plant-entry" data-name="LE Isadora">
+		<a href="#avisadora">
+		<img src="assets/avisadora.png" alt="LE Isadora">
+		</a>
+		<label for="cb11"></label>
+        <input type="checkbox" id="cb11" name="Isadora_Selected" value="Isadora_Selected">
+        LE 'Isadora'
+		<label for="qty11"></label>
+		<input type="number" id="qty11" name="Isadora_Quantity" min="1" max="6" placeholder="Qty">
+    </div>
+	<div class="lightbox" id="avisadora">
+		<a href="#" class="close">&times;</a>
+		<img src="assets/avisadora.png" alt="LE Isadora - Large View">
+	</div>
+	
+</fieldset>
+
+</section>
+
+<section id="pickupinfo">
+	<h3>Local Pick-Up Information</h3>
+	<p>At this time, shipping is not available.</p>
+	<p>Please select a date and approximate time that typically works best for you, and I will do my best to schedule around that time.</p>
+	<p><span id="address">Pick-Up Address:</span><br>Farmington Hills PD<br>31655 W. 11 Mile Rd.,<br>Farmington Hills, MI 48336</p>
+</section>
+
+<fieldset id="enterinfo">
+	<h3>Enter your information</h3>
+	<label for="name">Your first and last name:</label>
+	<input type="text" id="name" name="name" required placeholder="First Last">
+<br><br>
+	<label for="email">Your email:</label>
+	<input type="email" id="email" name="email" required placeholder="example@email.com">
+<br><br>
+	<label for="date">Preferred pickup date:</label>
+	<input type="date" id="date" name="date">
+<br><br>
+	<label for="time">Preferred pickup time (I'm available between 10:00am and 7:00pm most days): (Optional)</label>
+	<input type="time" id="time" name="time" min="10:00" max="19:00">
+</fieldset>
+
+<section id="ordersummary">
+<p id="orderList"></p>
+<textarea name="orderSummary" id="orderSummary" class="hidden-field"></textarea>
+<input type="hidden" name="orderTotal" id="orderTotalField">
+<p class="total">Order Total: <span id="total">$0</span></p>
+<button type="submit" form="plantorderform">Submit Order</button>
+</section>
+</form>
+
+
+<br>
+<br>
+<p class="top"><a href="#top"><img class="leafup" src="assets/leafup.png" alt="Light green leaf with dark green border pointing up">Top of the page we grow!<img class="leafup" src="assets/leafup.png" alt="Light green leaf with dark green border pointing up"></a></p>
+</main>
+
+
+  <footer>
+    <p>&copy; 2026 Lauren's African Violets</p>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>

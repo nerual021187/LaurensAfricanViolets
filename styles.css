@@ -1,0 +1,409 @@
+	body 	
+		{
+		background-color: #ffe4ec; /* light pink */
+		margin: 0;
+		font-family: Arial, sans-serif;
+		padding-left: 240px;
+		}
+	header 	
+		{
+		background-color: #a3d9a5; /* Soft Green */
+		color: darkgreen;
+		font-family: papyrus, garamond, serif;
+		letter-spacing: 1px;
+		font-size: 25px;
+		width: fit-content;
+		margin-top: 50px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 1em 2em;
+		top: 20px;
+		left: 225px;
+		right: 0;
+		z-index: 1; /*Zero is default. higher numbers show up in front.*/
+		border-radius: 50px; /* long oval shape */
+		box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+		}
+	h1 		
+		{
+		margin: 0;
+		}
+	hr.rule	
+		{
+		background-color: darkgreen;
+		margin: 80px auto 0 auto;
+		height: 5px;
+		max-width: 75%;
+		border-radius: 10px;
+		}
+	h3
+		{
+		font-family: papyrus, garamond, serif;
+		}
+	h4 a	
+		{
+		display: block;
+		background-color: #a3d9a5; /* Soft Green */
+		color: darkgreen;
+		font-family: papyrus, garamond, serif;
+		text-align: center;
+		text-decoration: none;
+		width: fit-content;
+		padding: 14px 14px;
+		margin-bottom: 45px;
+		border-radius: 30px;
+		box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+		}
+	h4 a:hover, li a:hover
+		{
+		color: #d160a4; /* dark pink */
+		text-decoration: underline;
+		}
+	nav 	
+		{
+		width: 260px;
+		background-color: #ffe4ec; /* light pink */
+		padding: 14px;
+		background-image: url("assets/verticalvine.png");
+		background-repeat: repeat-y;
+		background-position: right;
+		background-size: 100px auto;
+		min-height: 100vh;
+		box-sizing: border-box;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		}
+	nav ul 	
+		{
+		list-style-type: none;
+		padding: 0;
+		margin-top: 16px; /* offset for header */
+		}
+	nav li 	
+		{
+		margin-bottom: 1em;
+		}
+	nav a	
+		{font-weight: bold}
+	nav a:link, ul.qcstxt > li a:link, .top a:link, .comptable a:link
+		{
+		text-decoration: underline;
+		color: darkgreen;
+		}
+	nav li a:visited, ul.qcstxt > li a:visited, .top a:visited, .comptable a:visited
+		{
+		color: #997950; /* Brown Tortilla */
+		text-decoration: none;
+		font-style: italic;
+		}    
+	nav a:hover, ul.qcstxt > li a:hover, .top a:hover, .comptable a:hover
+		{
+		color: #d160a4; /* dark pink */
+		text-decoration: underline;
+		}
+	nav li.active a, li.active
+		{
+		color: #d160a4; /* dark pink */
+		font-size: 18px;
+		text-shadow: 0px 4px 2px white, 0px -4px 2px white;
+		text-decoration: none;
+		}
+
+	#buyplants
+		{
+		display: block;
+		border: 2px dotted black;
+		background-image: linear-gradient(to bottom right, gold, yellow, gold);
+		max-width: 150px;
+		text-align: center;
+		margin-top: 10px;
+		}
+	.pagegrid
+		{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 30px;
+		}
+	main
+		{
+		margin-top: 20px;
+		padding: 2em;
+		color: darkgreen;
+		font-size: 18px;
+		}
+	img
+		{
+		border-radius: 10px;
+		box-shadow: 10px 10px 10px gray;
+		}
+
+
+/*Form Buttons and Input on index and form page*/
+
+	input
+		{
+		border: 2px solid #a3d9a5; /* Soft Green */
+		background-color: #FFFFFF;
+		opacity: 1;
+		color: darkgreen;
+		font-size: 14px;
+		}
+	input[type="text"]:focus
+		{
+		border-color: darkgreen;
+		box-shadow: 0 0 8px #a3d9a5;
+		}
+	button
+		{
+		border: 3px solid #a3d9a5; /* Soft Green */
+		border-radius: 20px;
+		background-color: #a3d9a550;
+		color: darkgreen;
+		font-weight: bold;
+		font-size: 16px;
+		}
+	button:hover
+		{
+		cursor: pointer;
+		}
+
+		
+/*Lightbox - All Images that expand on AV and Form page.*/
+	.lightbox
+		{
+		display: none;
+		position: fixed;
+		z-index: 100;
+		padding: 20px;
+		background: rgba(0, 0, 0, 0.85);
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		}
+/* Lightbox Open*/
+	.lightbox:target
+		{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		}
+/*Large Imgs*/
+	.lightbox img
+		{
+		max-width: 90%;
+		max-height: 80vh;
+		box-shadow: 0 0 20px #000;
+		border-radius: 10px;
+		}
+
+/*Close, Prev, and Next Buttons*/
+	.close,
+	.prev,
+	.next
+		{
+		position: absolute;
+		color: white;
+		font-size: 60px;
+		text-decoration: none;
+		user-select: none;
+		padding: 10px;
+		}
+	.close
+		{
+		top: 20px;
+		right: 100px;
+		}
+	.prev
+		{
+		top: 50%;
+		left: 50px;
+		transform: translateY(-50%);
+		}
+	.next
+		{
+		top: 50%;
+		right: 100px;
+		transform: translateY(-50%);
+		}
+
+
+/*All Articles on all pages*/
+	article
+		{
+		line-height: 1.5;
+		border: 5px solid #a3d9a5; /* Soft Green */
+		border-radius: 20px;
+		background-color: #FFFFFF90;
+		align-self: start;
+		justify-self: center;
+		width: 100%;
+		padding: 10px;
+		}
+		
+/*Fix Table on AV page*/
+	.fixtable
+		{
+		border-collapse: collapse;
+		border: 2px solid darkgreen;
+		max-width: 80%;
+		margin: 40px auto;
+		box-shadow: 10px 10px 10px gray;
+		background-color: #fff;
+		font-size: 16px;
+		}
+	.fixtable th,
+	.fixtable td
+		{
+		border: 1px solid darkgreen;
+		padding: 10px;
+		}
+	.fixtable tr:nth-child(even)
+		{
+		background-color: #f5f5f5;
+		padding: 10px;
+		}
+	.fixtable tr >:first-child
+		{
+		font-weight: bold;
+		padding: 10px;
+		}
+	.fixtable thead
+		{
+		background-color: #a3d9a5; /* Soft Green */
+		color: darkgreen;
+		padding: 10px;
+		}
+		
+
+/*Top of Page Links on all pages*/	
+	.top
+		{
+		text-align: center;
+		font-weight: bold;
+		font-size: 14px;
+		}
+	img.leafup
+		{
+		width: 2%;
+		box-shadow: none;
+		}
+
+/*Footer on all pages*/
+	footer
+		{
+		padding-left: 2em;
+		background-color: darkgreen;
+		color: white;
+		height: 80px;
+		display: block;
+		line-height: 80px; /* https://www.w3schools.com/css/css_align.asp */
+		}
+		
+
+
+/*RESPONSIVE*/
+@media screen and (max-width: 1174px) {
+
+	body,
+	main
+		{
+        font-size: 13px;
+		}
+	main
+		{
+		padding: 1em;
+		}
+	body
+		{
+		padding-left: 8px;
+		padding-right: 8px;
+		}
+	article
+		{
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		align-self: center;
+		}
+	img,
+	.fixtable,
+	.timelinetable
+		{
+		border-radius: 10px;
+		box-shadow: 6px 6px 6px gray;
+		}
+/*Hide Main Header*/
+	header
+		{
+		display: none;
+		}
+
+/*Move Nav Bar to Top*/
+	nav
+		{
+		position: static;
+		width: 100%;
+		height: auto;
+		min-height: unset;
+		background-image: none;
+		background-color: #ffe4ec;
+		padding: 10px;
+		}
+
+	nav h4
+		{
+		text-align: center;
+		width:100%;
+		margin: 20px auto 40px auto;
+		}
+	nav h4 a
+		{
+		display: inline-block;
+		margin: 0 auto;
+		}
+
+	nav ul
+		{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		padding: 0;
+		margin: 0;
+		}
+
+	nav ul li
+		{
+		list-style: none;
+		padding: 5px;
+		}
+	#buyplants
+		{
+		margin: 10px auto 0 auto;
+		}
+
+	.qcsbox
+		{
+		padding: 0;
+		margin: 0;
+		height: 0;
+		}
+	.qcsbox img
+		{
+		display: none;
+		}
+	.epbox
+		{
+		display: block;
+		margin: 0 auto 0 auto;
+		}
+	img.leafup
+		{
+		width: 6%;
+		box-shadow: none;
+		}
+	}

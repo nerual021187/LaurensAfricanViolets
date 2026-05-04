@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="A guide to caring for African Violets.">
+  <meta name="keywords" content="African Violet, Saintpaulia, Gesneriaceae, Gesneriad, Soil Mix, Bottom Watering, Wick Watering, Leaf Cutting Propagation">
+  <meta name="author" content="Lauren Green">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  
+  <title>Personal Homepage: African Violets</title>
+
+  <style>
+
+		
+/*Page Title*/
+	h2	
+		{
+		font-size: 36px;
+		text-decoration: none;
+		color: darkgreen;
+		font-weight: bold;
+		text-shadow: 2px 2px 2px #80008080;
+		text-align: center;
+		font-family: papyrus, garamond, serif;
+		}
+		
+/*Flexbox Images at Top of AV Page*/
+	.flxbx
+		{
+		background-color: #800080; /*Purple*/
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: center;
+		border-radius: 20px;
+		}
+	/*Small Flexbox Imgs*/
+	.flxbx img
+		{
+		max-width: 150px;
+		margin: 16px;
+		height: auto;
+		cursor: pointer;
+		transition: transform 0.2s;
+		box-shadow: none;
+		}
+	.flxbx img:hover
+		{
+		transform: scale(1.05);
+		}
+
+
+/*Quick Care Summary*/
+	figure.qcsbox
+		{
+		text-align: center;
+		}
+	.qcsbox img
+		{
+		transform: rotate(-5deg);
+		}
+	@keyframes Sway {
+		0%   {transform: rotate(-5deg); transform-origin: top center;}
+		25%  {transform: rotate(10deg);}
+		50%  {transform: rotate(-10deg);}
+		75%  {transform: rotate(10deg);}
+		100% {transform: rotate(-5deg);}
+		}
+	.sway {
+		animation: Sway 2s ease-out 1;
+		transform-origin: top center;
+		display: block;
+		margin: auto;
+		}
+
+
+/*Grid Layout and styles in order*/
+
+	article.pagegrid h3
+		{
+		font-size: 28px;
+		}
+	#habitat
+		{
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 1;
+		grid-column-end: 5;
+		margin-top: 20px;
+		}
+	#light
+		{
+		grid-row-start: 2;
+		grid-row-end: 3;
+		grid-column-start: 1;
+		grid-column-end: 5;
+		}
+	#watertxt
+		{
+		grid-row-start: 3;
+		grid-row-end: 4;
+		grid-column-start: 1;
+		grid-column-end: 4;
+		}
+	#waterimg
+		{
+		grid-row-start: 3;
+		grid-row-end: 4;
+		grid-column-start: 4;
+		grid-column-end: 5;
+		height: 440px;
+		margin: 18px auto 0 auto;
+		}
+	#girlwateringplants
+		{
+		width: 80%;
+		grid-row-start: 4;
+		grid-row-end: 5;
+		grid-column-start: 2;
+		grid-column-end: 4;
+		justify-self: center;
+		}
+	#soil
+		{
+		grid-row-start: 5;
+		grid-row-end: 6;
+		grid-column-start: 1;
+		grid-column-end: 5;
+		}
+		
+/*Editor Preference Box*/
+	.epbox
+		{
+		grid-row-start: 6;
+		grid-row-end: 7;
+		grid-column-start: 1;
+		grid-column-end: 5;
+		display: inline-block;
+		border: 2px solid darkgreen;
+		border-radius: 10px;
+		max-width: 75%;
+		box-shadow: 10px 10px 10px gray;
+		background-color: darkgreen;
+		color: #ffe4ec; /* light pink */
+		padding: 0 10px 10px 10px;
+		}
+	.edprf
+		{
+		font-size: 20px;
+		font-weight: bold;
+		}
+	blockquote
+		{
+		font-style: italic;
+		}
+		
+	#temp
+		{
+		grid-row-start: 7;
+		grid-row-end: 8;
+		grid-column-start: 1;
+		grid-column-end: 5;
+		}
+	#propcup
+		{
+		grid-row-start: 8;
+		grid-row-end: 9;
+		grid-column-start: 1;
+		grid-column-end: 2;
+		max-width: 350px;
+		justify-self: center;
+		margin-top: 70px;
+		}
+	#proptxt
+		{
+		grid-row-start: 8;
+		grid-row-end: 9;
+		grid-column-start: 2;
+		grid-column-end: 5;
+		}
+	#cut
+		{
+		grid-row-start: 9;
+		grid-row-end: 10;
+		grid-column-start: 2;
+		grid-column-end: 3;
+		display: block;
+		margin: auto;
+		width: 250px;
+		height: 300px;
+		}
+	#cup
+		{
+		grid-row-start: 9;
+		grid-row-end: 10;
+		grid-column-start: 3;
+		grid-column-end: 4;
+		display: block;
+		margin: auto;
+		width: 250px;
+		height: 300px;
+		}
+	#varcol
+		{
+		grid-row-start: 10;
+		grid-row-end: 11;
+		grid-column-start: 1;
+		grid-column-end: 4;
+
+		}
+	#gems
+		{
+		grid-row-start: 10;
+		grid-row-end: 11;
+		grid-column-start: 4;
+		grid-column-end: 5;
+		max-width: 350px;
+		border-radius: 10px;
+		margin: auto;
+		}
+		
+	/*AV Space Image*/
+	.avspace
+		{
+		grid-row-start: 11;
+		grid-row-end: 12;
+		grid-column-start: 1;
+		grid-column-end: 5;
+		max-width: 30%;
+		}
+	.avspace img
+		{
+		max-width: 75%;
+		display: block;
+		margin: 0 auto;
+		border-radius: 20px;
+		}
+	#fix
+		{
+		grid-row-start: 12;
+		grid-row-end: 13;
+		grid-column-start: 1;
+		grid-column-end: 5;
+		}
+	.fixtable
+		{
+		border: 2px solid darkgreen;
+		font-size: 16px;
+		}
+
+/*Image Tables*/
+	.imgtable
+		{
+		grid-row-start: 13;
+		grid-row-end: 14;
+		grid-column-start: 1;
+		grid-column-end: 5;
+		max-width: 95%;
+		margin: auto;
+		border-collapse: collapse;
+		text-align: center;
+		}
+	.imgtable img
+		{
+		max-width: 50%;
+		border: 5px solid darkgreen;
+		}
+	caption
+		{
+		font-size: 25px;
+		font-weight: bold;
+		}
+	.imgtablemobile
+	{
+	display: none;
+	}
+
+
+
+/*RESPONSIVE*/
+@media only screen and (max-width: 1174px) 
+{
+
+/* Collapse the grid layout */
+.pagegrid
+	{
+    display: flex;
+    flex-direction: column;
+	justify-content: flex-start;
+	gap: 20px;
+	}
+	
+.pagegrid > article
+	{
+    width: 90%;
+    margin: 0 auto;
+	}
+.pagegrid img
+	{
+	width: 80%;
+	margin: 0 auto;
+	}
+	
+/*Change Flex Layout*/
+
+#habitat
+	{
+	order: 1;
+	}
+#light
+	{
+	order: 2;
+	}
+#watertxt
+	{
+	order: 3;
+	}
+#waterimg
+	{
+	order: 4;
+	height: auto;
+	}
+#girlwateringplants
+	{
+	order: 5;
+	margin: 10px auto;
+	}
+#soil
+	{
+	order: 6; 
+	}
+.epbox
+	{
+	order: 7;
+	box-shadow: 6px 6px 6px gray;
+	}
+#temp
+	{
+	order: 8;
+	}
+#proptxt
+	{
+	order: 9;
+	}
+#propcup
+	{
+	order: 10;
+	margin: 0 auto 5px auto;
+	}
+#cut
+	{
+	order: 11;
+	margin: 5px auto;
+	}
+#cup
+	{
+	order: 12;
+	}
+#varcol
+	{
+	order: 13;
+	}
+#gems
+	{
+	order: 14;
+	}
+.avspace
+	{
+	order: 15;
+	width: 80%;
+	max-width: 444px;
+	}
+#fix
+	{
+	order: 16;
+	}
+.fixtable
+	{
+	font-size: 13px;
+	}
+.fixtable th,
+.fixtable td
+	{
+	padding: 8px;
+	}
+	
+
+/*Image Table Responsive*/	
+.imgtable
+	{
+	display: none;
+	}
+.imgtablemobile
+	{
+	display: table;
+	order: 17;
+	width: 80%;
+	max-width: 600px;
+	margin: 20px auto;
+	border-collapse: collapse;
+	text-align: center;
+	}
+.imgtablemobile td
+	{
+	text-align: center;
+	padding-bottom: 20px;
+	}
+.imgtablemobile img
+	{
+	width: 50%;
+	border: 5px solid darkgreen;
+	height: auto;
+	}
+
+}
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <nav>
+	<h4><a href="index.html">Lauren's<br>
+		African Violets</a></h4>
+	
+	<ul>		
+		<li><a href="index.html">Home</a></li>
+		<li class="active"><a href="africanviolets.html">&#10087; &nbsp; African Violet Care</a></li>      
+
+    </ul>
+
+	<ul>
+		<li id="buyplants"><a href="form.html">Buy<br>African Violet<br>Starter Plants!</a></li>
+	</ul>
+  </nav>
+
+  <header>
+    <h1>Lauren's African Violets</h1>
+  </header>
+
+<hr class="rule" id="top">
+
+<main>
+
+<h2 id="avbookmark">African Violet (Saintpaulia ionantha) Care Guide</h2>
+<br>
+	<div>
+
+<!--Flexbox image gallery-->
+		<div class="flxbx">
+			<a href="#img1"><img src="assets/aveod.jpg" title="African Violet 'Edge of Darkness'" alt="African Violet 'Edge of Darkness'"></a>
+			<a href="#img2"><img src="assets/avmichele.jpg" title="African Violet 'Optimara Rhapsodie Michele'" alt="African Violet 'Optimara Rhapsodie Michele'"></a>
+			<a href="#img3"><img src="assets/avnononsense.jpg" title="African Violet 'No Nonsense'" alt="African Violet 'No Nonsense'"></a>
+			<a href="#img4"><img src="assets/avevergrace.jpg" title="African Violet depiction inspired by 'Evergrace'" alt="African Violet depiction inspired by 'Evergrace'"></a>
+			<a href="#img5"><img src="assets/avchipmunkcheeks.jpg" title="African Violet 'Chipmunk Cheeks'" alt="African Violet 'Chipmunk Cheeks'"></a>
+		</div>
+
+<!--Lightbox https://www.w3schools.com/howto/howto_js_lightbox.asp-->
+		<div class="lightbox" id="img1">
+			<a href="#img5" class="prev">&#10094;</a>
+			<img src="assets/aveod.jpg" alt="African Violet 'Edge of Darkness'">
+			<a href="#" class="close">&times;</a>
+			<a href="#img2" class="next">&#10095;</a>
+		</div>
+
+		<div class="lightbox" id="img2">
+			<a href="#img1" class="prev">&#10094;</a>
+			<img src="assets/avmichele.jpg" alt="African Violet 'Optimara Rhapsodie Michele'">
+			<a href="#" class="close">&times;</a>
+			<a href="#img3" class="next">&#10095;</a>
+		</div>
+
+		<div class="lightbox" id="img3">
+			<a href="#img2" class="prev">&#10094;</a>
+			<img src="assets/avnononsense.jpg" alt="African Violet 'No Nonsense'">
+			<a href="#" class="close">&times;</a>
+			<a href="#img4" class="next">&#10095;</a>
+		</div>
+
+		<div class="lightbox" id="img4">
+			<a href="#img3" class="prev">&#10094;</a>
+			<img src="assets/avevergrace.jpg" alt="African Violet depiction inspired by 'Evergrace'">
+			<a href="#" class="close">&times;</a>
+			<a href="#img5" class="next">&#10095;</a>
+		</div>
+
+		<div class="lightbox" id="img5">
+			<a href="#img4" class="prev">&#10094;</a>
+			<img src="assets/avchipmunkcheeks.jpg" alt="African Violet 'Chipmunk Cheeks'">
+			<a href="#" class="close">&times;</a>
+			<a href="#img1" class="next">&#10095;</a>
+		</div>
+
+	</div>
+
+<br><br>
+
+<div class="noteblock">
+  <figure class="qcsbox">
+  <img class="sway imagestyle" usemap="#notepurple" src="assets/whitenotepurplepinsmall.jpg" alt="White note with purple pin.">
+  </figure>
+  <map name="notepurple">
+		<area shape="rect" coords="22,126,82,151" href="#light" title="Light Info" alt="Link to light info on this page">
+		<area shape="rect" coords="22,155,87,174" href="#watertxt" title="Water Info" alt="Link to water info on this page">
+		<area shape="rect" coords="22,180,62,201" href="#soil" title="Soil Info" alt="Link to soil info on this page">
+		<area shape="rect" coords="22,207,84,228" href="#temp" title="Temperature Info" alt="Link to temperature info on this page">
+		<area shape="rect" coords="22,231,113,254" href="#temp" title="Humidity Info" alt="Link to humidity info on this page">
+		<area shape="rect" coords="22,260,143,282" href="#proptxt" title="Propagation Info" alt="Link to propagation info on this page">
+  </map>
+</div>
+
+<div class="pagegrid">
+
+  <article id="habitat">
+	<h3>&#x1f3e0; Natural Habitat</h3>
+	<p>Saintpaulia, AKA African Violets, come from the mountain forests of Tanzania and Kenya. They naturally grow in cooler, humid areas where it stays around 65 to 80 degrees year-round. These spots get regular light rainfall and stay damp without being soggy. The plants grow under thick forest canopies, so they only get soft, filtered light — no harsh sun. The ground there is made up of crumbly, decaying leaves and moss, which holds moisture without compacting. That’s why African Violets do best in bright indirect light, with warm temps and light, fluffy soil that stays just barely moist.</p>
+  </article>
+
+
+
+  <article id="light">
+	<h3>&#x1f31e; Light Requirements</h3>
+	<p>African Violets thrive in bright, indirect (filtered) light. They are sensitive to harsh direct sun, which can scorch their leaves, especially the fuzzy foliage.</p>
+	<ul>		
+		<li><strong>Best natural light:</strong><br>East or north facing windows are ideal. East-facing provides gentle morning sun that they tolerate well. North-facing windows give even, diffused light throughout the day.</li>
+		<li><strong>Filtered light:</strong><br>If using a south- or west-facing window, the plant must be shielded with sheer curtains or placed a few feet back from the window to prevent leaf burn.</li>
+		<li><strong>Direct sun tolerance:</strong><br>African Violets can handle up to 1 hour of early morning direct sun, but midday and afternoon sun is too intense. Never allow them to receive direct sun from 10 a.m. to 4 p.m.</li>
+		<li><strong>Hours of light needed:</strong><br>Aim for 10 to 12 hours of filtered light per day. If using a mix of light types, they can handle about 1 hour direct + 8 to 10 hours filtered.</li>
+		<li><strong>Artificial lighting:</strong><br>They do very well under full-spectrum fluorescent or LED grow lights. Keep the light 12 to 15 inches above the plant and run it for 12 to 14 hours per day if there's little to no natural light. Avoid incandescent bulbs; they produce too much heat and not enough useful light.</li>
+		<li><strong>Signs of too little light:</strong><br>Long stems or a stretched center as they stretch towards the light. Small or no blooms, and pale or floppy leaves.</li>
+		<li><strong>Signs of too much light:</strong><br>Leaf curl, crispy leaf edges, sun-bleached patches, or leaf scorching.</li>
+		<li><strong>Variegated varieties:</strong><br>These need slightly more light than solid green varieties. Increase filtered light exposure or raise artificial light intensity to maintain variegation without causing damage.</li>
+	</ul>
+		<p>Regardless of the recommendations above, monitor your plant's response and adjust your approach as necessary.</p>
+    </article>
+
+
+	
+  <article id="watertxt">
+		<h3>&#x1f4a7; Watering &amp; Feeding Guidelines</h3>
+		<p>Proper watering and consistent feeding is crucial for healthy African Violets.</p>
+		<h4>Watering:</h4>
+			<ul>		
+			<li>Water from the bottom to prevent leaf spotting and crown rot.</li>
+			<li>If you choose the bottom watering method, make sure to remove the planter from the water after about 30 minutes to an hour so your plant doesn't sit in water, which can lead to root rot.</li>
+			<li>If watering from the top, avoid getting water on the leaves, as it can cause spotting or damage, and water only the soil.</li>
+			<li>In wick-watering setups, ensure the wick is moist and the reservoir is clean.</li>
+			<li>Use room-temperature or lukewarm water to avoid shocking the plant.</li>
+			<li>Check the soil every 2 to 3 days. Water when the top half-inch feels dry to the touch, or consider using a self-watering planter to maintain consistent moisture. Overwatering can lead to root rot, while underwatering causes wilting.</li>
+			</ul>
+		<h4>Feeding:</h4>
+			<ul>		
+			<li>Use a water-soluble, balanced fertilizer (e.g., 14-12-14 or 20-20-20).</li>
+			<li>Choose a formula specifically for African Violets if available.</li>
+			<li>If concentrated, dilute to ¼ to ½ strength to avoid fertilizer burn.</li>
+			<li>Apply fertilizer more sparingly when using wick systems to prevent buildup, or rinse the soil (without letting water sit on the leaves) once every couple of months.</li>
+			<li>During active growth, feed approximately every 2 to 4 weeks with a balanced, water-soluble fertilizer made for African Violets (e.g., 20-20-20).</li>
+			</ul>
+		<h4>Frequency:</h4>
+		<p>African Violets typically need water every 5–7 days, depending on the size of the pot, warmth, and airflow. During active growth or under grow lights, they may dry out sooner. Feed every 2–4 weeks during the growing season. In wick-watering systems, feeding can be done monthly using a more diluted solution.</p>
+  </article>
+  
+	<img class="imagestyle" id="waterimg" src="assets/bottomwickwatering.jpg" alt="Illustration comparing two African violet watering methods: bottom watering with the pot sitting in a water-filled dish, and wick watering with a string drawing water from a jar below the pot.">
+	<!--Image created by Lauren Green using AI image creation.-->
+
+
+	<img class="imagestyle" id="girlwateringplants" src="assets/girlwateringplants.jpg" alt="Image of girl watering plants.">
+	<!--Image created by Lauren Green using AI image creation.-->
+
+
+
+
+  <article id="soil">
+		<h3>&#x1f331; Soil Preferences</h3>
+		<p>African Violets prefer:</p>
+			<ul>		
+			<li><strong>Well-draining, lightweight soil:</strong> Go with something loose and airy that holds a bit of moisture but doesn’t stay wet. A mix of peat moss, vermiculite, and perlite works great to keep the roots healthy and prevent the soil from packing down.</li>
+			<li><strong>Specialized potting mixes:</strong> If you don’t want to mix your own, look for bags labeled for African Violets. They’re already made to give the right balance of moisture, air, and nutrients.</li>
+			<li><strong>pH considerations:</strong> Slightly acidic soil, around 6.0 to 6.5, helps the plant take in nutrients and stay healthy.</li>
+			<li><strong>Skip heavy soils:</strong> Garden soil or anything dense will hold too much water and cut off airflow to the roots, which African Violets don’t handle well.</li>
+			</ul>
+  </article>
+
+<!--EDITORS PREF-->
+  <article class="epbox">
+		<h4 class="edprf">&#x1F31F; Editor's Preference:</h4>
+		<blockquote><p>"I’ve had the best luck using a custom mix for my African violets:</p>
+		
+		<p><strong>1 cup of African violet soil, 1 cup of perlite (for aeration), and ½ cup of vermiculite (for water retention).</strong></p>
+		
+		<p>My plants really seem to thrive in this blend. The added perlite keeps the soil light and well-draining, preventing too much water from sitting around the roots. The vermiculite helps the mix hold onto just enough moisture to keep the plant from drying out too quickly between waterings. For me, this has been the perfect balance.</p>
+		
+		<p>That said, this mix may not work for everyone. The right soil mix depends on a lot of factors, like what type of planter you’re using, how warm your home is, how humid it stays, and how much sunlight your plant gets. You may need to experiment a little to find what works best in your space." -Lauren Green</p>
+		</blockquote>
+  </article>
+
+
+
+  <article id="temp">
+		<h3>&#x1f321; Temperature &amp; Humidity</h3>
+		<p>Maintain a comfortable environment:</p>
+			<ul>		
+			<li><strong>Temperature:</strong> Keep them between 65°F and 80°F, with 70°F being ideal. Try to avoid sudden temperature drops, since that can stress the plant. Avoid going below 60°F.</li>
+			<li><strong>Humidity:</strong> They do best with moderate humidity, ideally 40% to 60%. If your air is dry, you can set a tray of water near the plant, group it with other plants, or run a small humidifier.</li>
+			<li><strong>No misting:</strong> African Violets can get spots on their leaves if water droplets sit on them, so misting isn’t a good way to raise humidity for this plant.</li>
+			</ul>
+  </article>
+
+
+	<img class="imagestyle" id="propcup" src="assets/avprop.jpg" alt="Close-up of an African violet leaf cutting in a white pot, showing successful propagation with a new baby plant sprouting at the base in perlite-rich soil.">
+	<!--Image created by Lauren Green using AI image creation.-->
+	<img class="imagestyle" id="cut" src="assets/avcutleaf.png" alt="African Violet leaf with properly cut stem.">
+	<!--Image created by Lauren Green using AI image creation.-->
+	<img class="imagestyle" id="cup" src="assets/avwaterprop.png" alt="African Violet leaf with stem through cling wrap going into water.">
+	<!--Image created by Lauren Green using AI image creation.-->
+	
+  <article id="proptxt">
+		<h3>&#x1f33f; Propagation</h3>
+		<p>African Violets are easy to propagate from leaf cuttings:</p>
+	<ul>		
+		<li>You can propagate in water or directly in soil.</li>
+		<li>The soil method is preferred by many (including me!) because the new plant adapts immediately to growing in soil.</li>
+		<li>To propagate:
+			<ol>
+				<li>With a clean, sharp pair of scissors or knife, cut a healthy leaf from the mid-section of the plant.</li>
+
+				<li>Snip the leaf stem at a 45-degree angle, trimming it down to no more than 1–2 inches in length.</li>
+
+				<li>Prepare the propagation method:
+					<ul>
+						<li>Soil method: Stick the stem at a 45-degree angle into moist African Violet soil.</li>
+						<li>Water method: Insert the stem into a small container of water.</li>
+					</ul>
+				</li>
+
+				<li>Place in bright, indirect light and wait for pups or roots.</li>
+
+				<li>Once established, separate and replant.</li>
+			</ol>
+		</li>
+	</ul>
+</article>
+	
+
+
+  <article id="varcol">
+		<h3>&#x1f338; Varieties &amp; Collecting</h3>
+		<p>There are so many different African Violet varieties out there, and they come in just about every combination of flower and leaf type you can imagine. Many collectors enjoy hunting for unique named cultivars, and it’s easy to see why—these plants are full of personality! Once you start collecting, it’s hard to stop.
+		</p>
+			<p>Here are some of the fun variations you’ll find:</p>	
+			<ul>		
+			<li><strong>Flower colors</strong> – Deep purples, bright pinks, blues, whites, reds, and even multicolored blooms with speckles, edging, or streaks. Some flowers are solid-colored, and others have contrasting centers or borders.</li>
+			<li><strong>Flower shapes</strong> – Single blooms, doubles, stars, wasp-shaped, fringed, or frilly petals make each variety feel unique.</li>
+			<li><strong>Leaf shapes</strong> – Leaves can be heart-shaped, oval, spooned, pointed, or curled. Some have a slight wave or ruffle to the edges.</li>
+			<li><strong>Leaf colors and patterns</strong> – From deep green to silvery green, with variegation in white, cream, pink, or even yellow. “Girl leaves” have a lighter or contrasting center that gives them a distinct look.</li>
+			<li><strong>Leaf textures</strong> – Smooth, fuzzy, quilted, scalloped, or velvety. Some are thick and firm, while others are soft and flexible.</li>
+			<li><strong>Plant sizes</strong> – Standard sizes, miniatures, semi-miniatures, and trailers that grow outward in a cascading way instead of upright.</li>
+			</ul>
+		<p>Whether you're just growing one or filling up a shelf with different types, African Violets are a great plant to collect because there’s always something new to discover.</p>
+  </article>
+			
+	<img class="imagestyle" id="gems" src="assets/avgems.jpg" alt="Gemstone sculpture of an African violet with faceted purple flowers, yellow gem centers, and dark green gem leaves in a faceted golden pot.">
+	<!--Image created by Lauren Green using AI image creation.-->
+
+<!--AV Space Image-->
+	<article class="avspace">
+	<a href="https://www.optimara.com/everfloris.html" target="_blank"><img src="assets/avspace.png" alt="Light purple African Violets with green edges set against a glowing galaxy, with the text 'African Violets from Outer Space?!'"></a>
+	<p><span class="bold">Did you know African Violets went to space?</span><br>In the 1980s, Optimara sent thousands of seeds into orbit, and when they came back, some had developed unique traits. These became the EverFloris line which are larger plants with nonstop blooms and ruffled leaves. They're now really popular with collectors because they’re beautiful and easy to grow.<br><strong>Click the image above to read more!</strong></p>
+	</article>
+
+  <article id="fix">
+	<h3>🛠️ Common Problems &amp; Fixes</h3>
+		<table class="fixtable">
+			<thead>
+			<tr>
+				<th>Symptom</th>
+				<th>Possible Cause</th>
+				<th>Suggested Fix</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>Yellowing, mushy lower leaves</td>
+				<td>Overwatering or poor drainage</td>
+				<td>Allow the top inch of soil to dry between waterings. Use a light, airy African violet mix and ensure the pot drains well. Remove damaged leaves.</td>
+			</tr>
+			<tr>
+				<td>Drooping or limp leaves</td>
+				<td>Root rot or inconsistent watering</td>
+				<td>Check for mushy roots. Repot if needed. Water with room-temperature water when the top inch of soil is dry. Avoid extremes of dry or soggy soil.</td>
+			</tr>
+			<tr>
+				<td>Pale or faded foliage with long stems</td>
+				<td>Not enough light</td>
+				<td>Move to a bright north or east-facing window. Leaf stems should grow short and flat under proper light. Use grow lights if needed.</td>
+			</tr>
+			<tr>
+				<td>Brown tips or leaf edges</td>
+				<td>Low humidity or fertilizer burn</td>
+				<td>Keep humidity around 40–60%. Use diluted African violet fertilizer monthly and avoid overfeeding. Water carefully to prevent salt buildup.</td>
+			</tr>
+			<tr>
+				<td>Crispy or curling leaves</td>
+				<td>Too much direct sunlight</td>
+				<td>Avoid placing in direct sun. Use sheer curtains or reposition the plant. Sunburned leaves may curl or develop crisp edges.</td>
+			</tr>
+			<tr>
+				<td>Brown, mushy crown or leaf stems</td>
+				<td>Crown rot due to water in center</td>
+				<td>Water from the bottom or carefully around the base. Avoid splashing water into the crown. Remove soft tissue immediately to prevent spread.</td>
+			</tr>
+			<tr>
+				<td>Leaf spots (yellow, tan, or brown)</td>
+				<td>Water on leaves, especially if cold, or sun scorch</td>
+				<td>Use only room-temperature water. Avoid getting leaves wet. Filter sunlight to prevent burn spots.</td>
+			</tr>
+			<tr>
+				<td>Stunted growth or no blooms</td>
+				<td>Insufficient light or low nutrients</td>
+				<td>Increase indirect light. Use a bloom-boosting fertilizer every 2–4 weeks. Repot annually to refresh nutrients.</td>
+			</tr>
+			<tr>
+				<td>Wilting despite moist soil</td>
+				<td>Root rot or compacted soil</td>
+				<td>Check roots for rot. Repot in a loose, well-draining mix. Avoid heavy or compacted soil blends.</td>
+			</tr>
+			<tr>
+				<td>Lower leaf drop or shriveled foliage</td>
+				<td>Environmental stress or cold exposure</td>
+				<td>Keep temperatures stable (65–80°F). Avoid cold drafts, heaters, or sudden changes in light and humidity. Remove aging or stressed leaves.</td>
+			</tr>
+			</tbody>
+		</table>
+
+  </article>
+
+
+
+<table class="imgtable">
+    <caption>Visual Symptoms to Help Identify Problem Conditions</caption>
+    <tr>
+		<td><img src="assets/avlackinglight.png" alt="African Violet that is not receiving enough light so the stems are stretching, and leaves are starting to yellow indicating nutrient deficiency or overwatering."></td>
+		<td><img src="assets/avperfect.png" alt="African Violet that appears to be receiving the proper care with good lighting (no stem stretching), and proper watering and nutrients (no leaf yellowing)."></td>
+		<td><img src="assets/avburnt.png" alt="African Violet that is receiving too much direct sunlight. The leaves are getting burnt, crispy edges, burn spots, and some are curling."></td>
+	</tr>
+    <tr>
+      <td>The African Violet above shows signs of<br>overwatering or nutrient deficiency (yellowing leaves),<br>and lack of light (stretching stems).</td>
+      <td>The African Violet above appears to be<br>receiving the proper care with good lighting,<br>and proper watering and nutrients.</td>
+	  <td>The African Violet above appears to be<br>receiving too much direct sunlight,<br>and/or not enough water.<br>The scorched, dry-looking leaves indicate this.</td>
+    </tr>
+  </table>
+
+<!--Table for mobile version. Not visible on normal web. Only for responsive.-->
+<table class="imgtablemobile">
+	<caption>Visual Symptoms to Help Identify Problem Conditions</caption>
+	<tr>
+		<td>
+		<img src="assets/avlackinglight.png" alt="">
+		<p>The African Violet above shows signs of overwatering or nutrient deficiency (yellowing leaves), and lack of light (stretching stems).</p>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		<img src="assets/avperfect.png" alt="">
+		<p>The African Violet above appears to be receiving the proper care with good lighting and proper watering and nutrients.</p>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		<img src="assets/avburnt.png" alt="">
+		<p>The African Violet above appears to be receiving too much direct sunlight and/or not enough water. The scorched leaves indicate this.</p>
+		</td>
+	</tr>
+</table>
+
+</div>
+
+<p class="top"><a href="#top"><img class="leafup" src="assets/leafup.png" alt="Light green leaf with dark green border pointing up">Top of the page we grow!<img class="leafup" src="assets/leafup.png" alt="Light green leaf with dark green border pointing up"></a></p>
+</main>
+
+
+  <footer>
+    <p>&copy; 2026 Lauren's African Violets</p>
+  </footer>
+</body>
+</html>

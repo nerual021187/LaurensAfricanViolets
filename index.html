@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="description" content="About Lauren">
+  <meta name="keywords" content="African Violet, Saintpaulia, Soil Mix, Bottom Watering, Wick Watering, Leaf Cutting Propagation,
+								Stem Cutting Propagation">
+  <meta name="author" content="Lauren Green">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <script src="script.js" defer></script>
+  
+  <title>Personal Homepage: Home</title>
+
+  <style>
+		
+	.gridcont
+		{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 10%;
+		justify-items: center;
+		row-gap: 10px;
+		}
+
+	h2
+		{
+		font-family: papyrus, garamond, serif;
+		}
+
+
+/*About Me Grid*/
+	#profphoto
+		{
+		float: left;
+		max-width: 20%;
+		}
+	article.aboutme
+		{
+		grid-row-start: 1;
+		grid-row-end: 2;	
+		grid-column-start: 1;
+		grid-column-end: 4;
+		padding: 0 0 25px 15px;
+		}
+	.aboutme h3
+		{
+		text-align: center;
+		text-shadow: 2px 2px 4px #a3d9a5; /* Soft Green */
+		}
+	.aboutme p
+		{
+		overflow: hidden;
+		padding-left: 20px;
+		}
+
+
+/*GIF AD*/
+	.avsalebanner
+		{
+		grid-row-start: 1;
+		grid-row-end: 2;	
+		grid-column-start: 4;
+		grid-column-end: 5;
+		justify-self: right;
+		}
+	#gifimg
+		{
+		border: 5px dotted black;
+		padding: 10px;
+		background-image: linear-gradient(to bottom right, gold, yellow, gold);
+		border-radius: 20px;
+		height: 45%;
+		}
+		
+
+/*WEATHER TIP*/
+	#weathertip h3
+		{
+		text-align: center;
+		text-shadow: 2px 2px 4px #a3d9a5; /* Soft Green */
+		}
+	#weathertip
+		{
+		grid-row-start: 2;
+		grid-row-end: 3;
+		grid-column-start: 1;
+		grid-column-end: 5;
+		}
+	.weatheremoji
+		{
+		font-size: 1.45em;
+		vertical-align: middle;
+		}
+
+/*5-DAY FORECAST GRID*/
+	.forecast
+		{
+		border: 2px solid #ccc;
+		background-color: lightyellow;
+		box-shadow: 10px 10px 10px gray;
+		border-radius: 20px;
+		grid-row-start: 3;
+		grid-row-end: 4;
+		grid-column-start: 1;
+		grid-column-end: 5;
+		max-width: 75%;
+		}
+	.forecast h3
+		{
+		text-align: center;
+		text-shadow: 2px 2px 4px #a3d9a5; /* Soft Green */
+		}
+
+/*5-DAY FORECAST WIDGET*/
+	.weatherwidget-io
+		{
+		margin: auto;
+		width: 100%;
+		max-width: 1016px;
+		}
+		
+		
+/*DISCLAIMER*/
+	.disclaimer
+		{
+		grid-row-start: 4;
+		grid-row-end: 5;
+		grid-column-start: 1;
+		grid-column-end: 5;
+		}
+	.disclaimer h3
+		{
+		text-align: center;
+		text-shadow: 2px 2px 4px #a3d9a5; /* Soft Green */
+		}
+
+	
+		
+		
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 1700px) 
+{
+.avsalebanner
+	{
+	display: none;
+	}
+article.aboutme
+		{
+		grid-row-start: 1;
+		grid-row-end: 2;	
+		grid-column-start: 1;
+		grid-column-end: 5;
+		}
+}
+
+
+@media screen and (max-width: 1174px) 
+{
+
+/* Collapse the homepage grid layout */
+.gridcont
+	{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+	align-items: center;
+	}
+	
+/*Change Flex Layout*/
+.message
+	{
+	order: 1;
+	}
+.aboutme
+	{
+	order: 2;
+	}
+#weathertip
+	{
+	order: 3;
+	}
+.forecast
+	{
+	order: 4;
+	}
+.disclaimer
+	{
+	order: 5;
+	}
+.avsalebanner
+	{
+	display: none;
+	}
+
+}
+
+  </style>
+
+</head>
+
+<body>
+
+  <nav>
+
+	<h4><a href="index.html">Lauren's<br>
+		African Violets</a></h4>
+	
+	<ul>
+		<li class="active"><a href="index.html">&#10087; &nbsp; About Me</a></li>
+		<li><a href="africanviolets.html">African Violet Care</a></li>      
+
+    </ul>
+	<ul>
+		<li id="buyplants"><a href="form.html">Buy<br>African Violet<br>Starter Plants!</a></li>
+	</ul>
+
+  </nav>
+  
+
+  <header>
+    <h1>Lauren's African Violets</h1>
+  </header>
+
+<hr class="rule" id="top">
+<main>
+
+<div class="gridcont">
+
+
+<!--About Me Grid-->
+	<article class="aboutme">
+		<h3>ABOUT  ME</h3>
+		<img class="imagestyle" id="profphoto" src="assets/profphoto.jpg" alt="A professional photo of me.">
+		<p>
+		Hello! My name is Lauren.
+<br><br>
+		If you’re here, you’re probably looking for African Violets.
+<br><br>
+		I feel like I should mention, I’m not a storefront. I grow plants at home and occasionally propagate leaves. When I get multiple baby plants, I keep one and sell the rest.
+<br><br>
+		Plants are listed at a low cost. You can view what’s available on the sale page.
+<br><br>
+		You’re welcome to submit a purchase request through this site, or message me on Facebook if that’s where you found this link.
+		</p>
+	</article>
+
+
+
+<!--PLANT TIP BASED ON CURRENT WEATHER-->
+	<article id="weathertip">
+		<h3>PLANT  TIP  BASED  ON  CURRENT  WEATHER</h3>
+		<p id="currentWeatherText">Loading weather...</p>
+		<p id="plantWeatherTip">Loading today’s plant care tip...</p>
+	</article>
+
+
+<!--5-DAY FORECAST WEATHER WIDGET-->
+	<article class="forecast">
+		<h3>PLAN AHEAD!<br>5-DAY FORECAST</h3>
+		<a class="weatherwidget-io" href="https://forecast7.com/en/42d33n83d05/detroit/?unit=us" data-label_1="DETROIT" data-label_2="WEATHER" data-font="Jura" data-icons="Climacons Animated" data-theme="weather_one" >DETROIT WEATHER</a>
+		<script>
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+		</script>
+	</article>
+
+
+<!--Plant Disclaimer Grid-->
+	<article class="disclaimer">
+		<h3>PLANT  DISCLAIMER</h3>
+		<p>
+<br><br>
+		I am a hobby grower, not a commercial nursery or hybridizer.
+<br><br>
+		All plants are propagated from existing varieties, and I do not claim to have created or developed any of them.
+<br><br>
+		Variety names are based on careful tracking and I make every effort to keep plants labeled correctly. 
+		Most plants are sold after at least one bloom, but African Violets can occasionally sport, so bloom color and appearance may vary.
+<br><br>
+		Plants are grown and sold as-is. As living plants, they may vary in size, color, and appearance, and I cannot guarantee future growth, blooms, or long-term performance.
+<br><br>
+		I am not responsible for issues after pickup, including damage, environment, or care.
+		</p>
+	</article>
+
+
+<!--African Violet Sale Banner / avsalebanner Grid-->
+	<div class="avsalebanner">
+		<a href="form.html">
+		<img id="gifimg" src="assets/avscrolladvert.gif" alt="African Violets now available for sale.">
+		</a>
+	</div>
+
+
+</div>
+
+
+<p class="top"><a href="#top"><img class="leafup" src="assets/leafup.png" alt="Light green leaf with dark green border pointing up">Top of the page we grow!<img class="leafup" src="assets/leafup.png" alt="Light green leaf with dark green border pointing up"></a></p>
+</main>
+
+
+  <footer>
+    <p>&copy; 2026 Lauren's African Violets</p>
+  </footer>
+
+</body>
+</html>
